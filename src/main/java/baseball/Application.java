@@ -12,10 +12,10 @@ public class Application {
         BaseballGameView view = new BaseballGameViewWithNsConsole();
         BaseballNumberFactory numberFactory = new NsBaseballNumberFactory();
         BaseballGame game = null;
-        do{
+        do {
             BaseballHintFactory hintFactory = new BaseballHintFactory(numberFactory.createRandomBaseballNumber());
             game = new BaseballGame(view, numberFactory, hintFactory);
             game.start();
-        }while (!game.isGameOver());
+        } while (!game.isGameOver());
     }
 }

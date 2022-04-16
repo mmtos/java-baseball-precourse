@@ -19,8 +19,12 @@ public class BaseballHint {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         BaseballHint that = (BaseballHint) o;
         return strike == that.strike && ball == that.ball;
     }
