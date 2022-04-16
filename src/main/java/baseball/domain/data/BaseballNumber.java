@@ -1,4 +1,4 @@
-package baseball.data;
+package baseball.domain.data;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,5 +29,12 @@ public class BaseballNumber {
 
     public int getThirdNumber() {
         return numbers.get(2);
+    }
+
+    @Override
+    public String toString() {
+        return "BaseballNumber{" +
+                "numbers=" + numbers +
+                '}';
     }
 }
