@@ -18,62 +18,62 @@ public class BaseballHintFactoryTest {
     void 낫싱_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(2,3,4);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(NOTHING_HINT));
+        assertThat(hint).isEqualTo(NOTHING_HINT);
     }
 
     @Test
     void 정답_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(1,6,7);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(CORRECT_HINT));
+        assertThat(hint).isEqualTo(CORRECT_HINT);
     }
 
     @Test
     void 볼3_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(6,7,1);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(0,3)));
+        assertThat(hint).isEqualTo(new BaseballHint(0,3));
     }
 
     @Test
     void 볼2_스트라이크1_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(6,1,7);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(1,2)));
+        assertThat(hint).isEqualTo(new BaseballHint(1,2));
     }
 
     @Test
     void 볼2_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(8,1,6);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(0,2)));
+        assertThat(hint).isEqualTo(new BaseballHint(0,2));
     }
 
     @Test
     void 볼1_스트라이크1_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(6,8,7);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(1,1)));
+        assertThat(hint).isEqualTo(new BaseballHint(1,1));
     }
 
     @Test
     void 스트라이크2_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(1,6,8);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(2,0)));
+        assertThat(hint).isEqualTo(new BaseballHint(2,0));
     }
 
     @Test
     void 볼1_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(3,7,2);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(0,1)));
+        assertThat(hint).isEqualTo(new BaseballHint(0,1));
     }
 
     @Test
     void 스트라이크1_힌트_생성_테스트(){
         BaseballNumber input = new BaseballNumber(1,9,8);
         BaseballHint hint = hintFactory.createBaseballHint(input);
-        assertThat(hint.equals(new BaseballHint(1,0)));
+        assertThat(hint).isEqualTo(new BaseballHint(1,0));
     }
 }
