@@ -19,16 +19,4 @@ public class BaseballNumber {
         return numbers;
     }
 
-    public int getFirstNumber() {
-        return numbers.get(0);
-    }
-
-    public int getSecondNumber() {
-        return numbers.get(1);
-    }
-
-    public int getThirdNumber() {
-        return numbers.get(2);
-    }
-
 }
