@@ -11,6 +11,12 @@ public class BaseballGameViewWithNsConsole implements BaseballGameView{
     }
 
     @Override
+    public String requestContinueOrOverMessage() {
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        return Console.readLine();
+    }
+
+    @Override
     public void printHintMessage(BaseballHint hint) {
         String ballMessage = makeBallMessage(hint.getBall());
         String strikeMessage = makeStrikeMessage(hint.getStrike());

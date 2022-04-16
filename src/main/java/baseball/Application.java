@@ -11,10 +11,11 @@ public class Application {
     public static void main(String[] args) {
         BaseballGameView view = new BaseballGameViewWithNsConsole();
         BaseballNumberFactory numberFactory = new NsBaseballNumberFactory();
-        BaseballHintFactory hintFactory = new BaseballHintFactory(numberFactory.createRandomBaseballNumber());
-        BaseballGame game = new BaseballGame(view, numberFactory, hintFactory);
+        BaseballGame game = null;
         do{
+            BaseballHintFactory hintFactory = new BaseballHintFactory(numberFactory.createRandomBaseballNumber());
+            game = new BaseballGame(view, numberFactory, hintFactory);
             game.start();
-        }while (!game.isEnd());
+        }while (!game.isGameOver());
     }
 }
