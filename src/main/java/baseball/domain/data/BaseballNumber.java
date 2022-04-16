@@ -31,10 +31,4 @@ public class BaseballNumber {
         return numbers.get(2);
     }
 
-    @Override
-    public String toString() {
-        return "BaseballNumber{" +
-                "numbers=" + numbers +
-                '}';
-    }
 }
